@@ -15,4 +15,4 @@ spec:
             path: /
   tls:
     - hosts:
-        - hello.infnet.edu.br
+        - hello.infnet.edu.br 
