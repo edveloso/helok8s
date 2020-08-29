@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helok8s
+  name: helok8s
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: helok8s
+  template:
+    metadata:
+      labels:
+        app: helok8s
+    spec:
+      containers:
+      - image: edveloso/helok8s:1.0
+        name: helok8s       

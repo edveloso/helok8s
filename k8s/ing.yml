@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: helok8s
+  name: helok8s
+spec:
+  rules:
+    - host: hello.infnet.edu.br
+      http:
+        paths:
+          - backend:
+              serviceName: helo-svc
+              servicePort: 8181
+            path: /
+  tls:
+    - hosts:
+        - hello.infnet.edu.br
